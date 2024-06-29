@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1719597503638,
+      "tag": "0000_normal_skin",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1719601079371,
+      "tag": "0001_lucky_vulture",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1719602471754,
+      "tag": "0002_eminent_tinkerer",
+      "breakpoints": true
+    }
+  ]
+}
