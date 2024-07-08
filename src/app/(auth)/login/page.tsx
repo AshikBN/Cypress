@@ -3,7 +3,7 @@
 import { FormSchema } from '@/lib/types';
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
-import { useForm ,SubmitHandler} from 'react-hook-form';
+import { useForm ,SubmitHandler,Controller} from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form';
@@ -67,7 +67,7 @@ const LoginPage = () => {
         disabled={isLoading}
         name='email'
         control={form.control}
-        render={(field)=>{
+        render={({field})=>{
           return (
             <FormItem>
             <FormControl>
