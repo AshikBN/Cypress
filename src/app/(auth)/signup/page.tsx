@@ -15,18 +15,10 @@ import Loader from '@/components/global/loader';
 import Logo from "../../../../public/cypresslogo.svg";
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { MailCheck } from 'lucide-react';
-import { FormSchema } from '@/lib/types';
+import { FormSchema, SignUpFormSchema } from '@/lib/types';
 import { actionSignUpUser } from '@/lib/server-actions/auth-actions';
 
-const SignUpFormSchema=z.object({
-    email:z.string().describe('Email').email({message:"Invalid Email"}),
-    password:z.string().describe('Password').min(6,"Password must be minimum 6 characters"),
-    confirmPassword:z.string().describe('Confirm Password').min(6,"Password must be minimum 6 characters")
-}).refine((data)=>data.password===data.confirmPassword,
-{
-    message:"passwords don't match",
-    path:['confirmPassword']
-})
+
 
 const SignUP = () => {
     const router=useRouter()

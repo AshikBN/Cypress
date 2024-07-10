@@ -27,8 +27,6 @@ export async function middleware(req: NextRequest) {
         )
         );
     }
-    // console.log("************")
-    // console.log(session)
 
     if (['/login', '/signup'].includes(req.nextUrl.pathname)) {
         if (session) {
