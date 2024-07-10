@@ -60,7 +60,7 @@ const DashboardSetup:React.FC<DashboardSetupProps> = ({user,subscription}) => {
                 <Label htmlFor='workspaceName' className='text-sm text-muted-foreground'>
                   Name
                 </Label>
-                <Input  id='workspaceName' type='text' placeholder='Workspace Name' disabled={isLoading}
+                <Input  id='workspaceName ' type='text' placeholder='Workspace Name' disabled={isLoading}
                 {...register('workspaceName',{required:'Workspace name is required'})}
                 />
                 <small className='text-red-600'>
